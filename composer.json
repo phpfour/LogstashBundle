@@ -1,7 +1,7 @@
 {
     "name": "emran/logstash-bundle",
     "type": "symfony-bundle",
-    "description": "LogstashBundle",
+    "description": "Symfony2 Bundle for writing logs to logstash through redis broker/input.",
     "keywords": ["log", "logging"],
     "homepage": "http://www.emranhasan.com",
     "license": "MIT",
