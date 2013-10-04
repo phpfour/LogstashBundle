@@ -1,0 +1,7 @@
+parameters:
+  logstash.input.redis.class: Emran\Bundle\LogstashBundle\Input\RedisInput
+
+services:
+  logstash.logger:
+    class: %logstash.input.redis.class%
+    arguments: [ @service_container ]

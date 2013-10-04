@@ -1,7 +1,0 @@
-parameters:
-  lm.service.input.redis.class: Loosemonkies\Bundle\LogstashBundle\Input\RedisInput
-
-services:
-  lm.logstash.logger:
-    class: %lm.service.input.redis.class%
-    arguments: [ @service_container ]

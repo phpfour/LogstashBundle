@@ -3,13 +3,13 @@
 /**
  * This file is part of the LogstashBundle package.
  *
- * (c) Mohammad Emran Hasan <http://emranhasan.com/>
+ * (c) Mohammad Emran Hasan <http://emranhasan.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
  */
 
-namespace Loosemonkies\Bundle\LogstashBundle\Input;
+namespace Emran\Bundle\LogstashBundle\Input;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Bridge\Monolog\Logger;
@@ -19,10 +19,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
 /**
- * The custom logger class that wraps the monolog logger
+ * The custom logger class that wraps the Monolog logger
  * to work with redis based logstash configuration.
  *
- * @author Mohammad Emran Hasan <emranhasan@gmail.com>
+ * @author Mohammad Emran Hasan <phpfour@gmail.com>
  */
 class RedisInput implements LoggerInterface
 {
@@ -31,10 +31,10 @@ class RedisInput implements LoggerInterface
 
     public function __construct(ContainerInterface $container)
     {
-        $host = $container->getParameter('lm.logstash.redis.host');
-        $port = $container->getParameter('lm.logstash.redis.port');
-        $list = $container->getParameter('lm.logstash.redis.list');
-        $name = $container->getParameter('lm.logstash.redis.name');
+        $host = $container->getParameter('logstash.redis.host');
+        $port = $container->getParameter('logstash.redis.port');
+        $list = $container->getParameter('logstash.redis.list');
+        $name = $container->getParameter('logstash.redis.name');
 
         if (class_exists('\Redis')) {
             $redis = new \Redis();
