@@ -1,0 +1,29 @@
+{
+    "name": "loosemonkies/logstash-bundle",
+    "type": "symfony-bundle",
+    "description": "Loosemonkies LogstashBundle",
+    "keywords": ["log", "logging"],
+    "homepage": "http://www.loosemonkies.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Emran Hasan",
+            "email": "emranhasan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/monolog-bundle": "~2.2-beta2",
+        "symfony/monolog-bridge": "~2.2-beta2",
+        "symfony/dependency-injection": "~2.2-beta2",
+        "symfony/config": "~2.2-beta2",
+        "monolog/monolog": "~1.3"
+    },
+    "require-dev": {
+        "symfony/yaml": "~2.2-beta2"
+    },
+    "autoload": {
+        "psr-0": { "Loosemonkies\\Bundle\\LogstashBundle": "" }
+    },
+    "target-dir": "Loosemonkies/Bundle/LogstashBundle"
+}
