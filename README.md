@@ -2,11 +2,9 @@
 
 A bundle on top of MonologBundle which provides logging to logstash through redis broker/input.
 
-### Installation
+## Installation
 
-Installation is a quick process:
-
-##### Step 1: Download AliDatatableBundle
+##### Step 1: Download LogstashBundle
 
 Add logstash bundle in your composer.json as below:
 
@@ -48,7 +46,7 @@ emran_logstash:
         name: myApp
 ```
 
-### How to use ?
+## How to use ?
 
 Assuming for example that you need to log an event from a controller action, get the service in your controller method
 and use the appropriate methods (debug, info, critical, etc) as below:
