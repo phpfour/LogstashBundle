@@ -1,7 +1,9 @@
 parameters:
-  logstash.input.redis.class: Emran\Bundle\LogstashBundle\Input\RedisInput
+  controller_listener.class: Emran\Bundle\LogstashBundle\EventListener\LoggerListener
 
 services:
-  logstash.logger:
-    class: %logstash.input.redis.class%
-    arguments: [ @service_container ]
+  controller_listener:
+    class: %controller_listener.class%
+    arguments: [@service_container]
+    tags:
+      -   { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
