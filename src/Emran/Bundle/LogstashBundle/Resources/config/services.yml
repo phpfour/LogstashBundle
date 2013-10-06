@@ -1,9 +1,9 @@
 parameters:
-  controller_listener.class: Emran\Bundle\LogstashBundle\EventListener\LoggerListener
+  logstash.controller_listener.class: Emran\Bundle\LogstashBundle\EventListener\LoggerListener
 
 services:
-  controller_listener:
-    class: %controller_listener.class%
+  logstash.controller_listener:
+    class: %logstash.controller_listener.class%
     arguments: [@service_container]
     tags:
       -   { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
