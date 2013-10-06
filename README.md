@@ -48,17 +48,14 @@ emran_logstash:
 
 ## How to use ?
 
-Assuming for example that you need to log an event from a controller action, get the service in your controller method
-and use the appropriate methods (debug, info, critical, etc) as below:
+The bundle adds a new handler to the already register logger service, so there shouldn't be any change in the way
+you are logging your events:
 
 ```php
 public function indexAction()
 {
-    $this->get('logstash.logger')->debug('Loading index page.');
+    $this->get('logger')->debug('Loading index page.');
     return $this->render('TestBundle:Default:index.html.twig');
 }
 
 ```
-
-Remember, this is the standard logger service wrapped with a class. You can call any of the standard severity methods on
-this class: emergency, alert, critical, error, warning, notice, info, debug, log.
