@@ -11,7 +11,7 @@ Add logstash bundle in your composer.json as below:
 ```js
 "require": {
     ...
-    "emran/logstash-bundle": "dev-master"
+    "emran/logstash-bundle": "1.0.0"
 }
 ```
 
