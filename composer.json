@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony2 Bundle for writing logs to logstash through redis broker/input.",
     "keywords": ["log", "logging"],
-    "homepage": "http://www.emranhasan.com",
+    "homepage": "http://phpfour.com",
     "license": "MIT",
     "authors": [
         {
